@@ -22,3 +22,15 @@ public class sumOfThreeValues {
         return false;
     }
 }
+
+/*
+ * 
+ * Time Complexity:
+ * Sorting the array: O(nlogn)
+ * Nest loop to find the triplet: O(n^2)
+ * Total: O(nlogn + n^2)
+ * 
+ * Space Complexity:
+ * O(logn), in java the sorting algorithm takes O(logn) space.
+ * 
+ */
