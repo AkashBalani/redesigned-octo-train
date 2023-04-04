@@ -19,8 +19,15 @@ public class happyNumber {
             if(fast == 1 || slow == 1)
                 return true;
         }
-        if(fast == 1 || slow == 1)
-            return true;
-        return false;
+        
+        return fast == 1;
     }
 }
+
+/*
+ * Time Complexity:
+ * O(log n)
+ * 
+ * Space Complexity:
+ * O(1)
+ */
