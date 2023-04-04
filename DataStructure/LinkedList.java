@@ -15,7 +15,26 @@ public class LinkedList {
         return head;
     }
 
+    public void createCycle(int start, int end, ListNode node){
+        ListNode ref = node;
+        while(start != 1){
+            start--;
+            node = node.next;
+        }
+        ListNode cycleStart = node;
+        node = ref;
+        while(end != 1){
+            end--;
+            node = node.next;
+        }
+        cycleStart.next = node;
+    }
+
     public void printList(ListNode node){
-        System.out.print(node.data + "-");
+        while(node != null){
+            System.out.print(node.data + "-");
+            node = node.next;
+        }
+        System.out.print("end");
     }
 }
