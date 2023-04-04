@@ -15,3 +15,11 @@ public class linkedListCycle {
         return false;
     }
 }
+
+/*
+ * Time Complexity:
+ * O(N) as we have to traverse the list atleast once
+ * 
+ * Space Complexity:
+ * O(1) for storing values in the variables
+ */
