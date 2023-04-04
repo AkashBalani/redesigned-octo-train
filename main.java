@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-import TwoPointers.validPalindromeTwo;
+import FastAndSlow.happyNumber;
 
 public class main {
     public static void main(String[] args) {
-        validPalindromeTwo palindromeTwo = new validPalindromeTwo();
+        happyNumber number = new happyNumber();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter string to check if palindrome");
-        String str = scanner.nextLine();
-        boolean result = palindromeTwo.isPalindrome(str);
+        System.out.println("Enter number to check if happy");
+        int num = scanner.nextInt();
+        boolean result = number.isHappy(num);
         scanner.close();
         System.out.println(result);
     }
