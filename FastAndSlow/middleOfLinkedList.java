@@ -18,3 +18,11 @@ public class middleOfLinkedList {
         return (len % 2 == 1) ? slow : slow.next;
     }
 }
+
+/*
+ * Time Complexity:
+ * O(n) for traversing the linked list
+ * 
+ * Space Complexity:
+ * O(1) for variables
+ */
