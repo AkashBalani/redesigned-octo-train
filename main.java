@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-import TwoPointers.reverseWordsInString;
+import TwoPointers.reverseWordsInStringV2;
 
 public class main {
     public static void main(String[] args) {
-        reverseWordsInString reverse = new reverseWordsInString();
+        reverseWordsInStringV2 reverse = new reverseWordsInStringV2();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter string to be reversed");
         String str = scanner.nextLine();
-        String rev = reverse.revWords(str);
+        String rev = reverse.reverseWords(str);
         scanner.close();
         System.out.println(rev);
     }
