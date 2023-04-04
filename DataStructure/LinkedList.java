@@ -32,7 +32,7 @@ public class LinkedList {
 
     public void printList(ListNode node){
         while(node != null){
-            System.out.print(node.data + "-");
+            System.out.print(node.data + " -> ");
             node = node.next;
         }
         System.out.print("end");
