@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
-import TwoPointers.reverseWordsInStringV2;
+import TwoPointers.validPalindromeTwo;
 
 public class main {
     public static void main(String[] args) {
-        reverseWordsInStringV2 reverse = new reverseWordsInStringV2();
+        validPalindromeTwo palindromeTwo = new validPalindromeTwo();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter string to be reversed");
+        System.out.println("Enter string to check if palindrome");
         String str = scanner.nextLine();
-        String rev = reverse.reverseWords(str);
+        boolean result = palindromeTwo.isPalindrome(str);
         scanner.close();
-        System.out.println(rev);
+        System.out.println(result);
     }
 }
