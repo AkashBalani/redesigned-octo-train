@@ -14,4 +14,8 @@ public class LinkedList {
         copyOfHead.next = node;
         return head;
     }
+
+    public void printList(ListNode node){
+        System.out.print(node.data + "-");
+    }
 }
