@@ -28,6 +28,21 @@ public class LinkedList {
     }
     // Method to insert at the head of the Linked List
 
+    public ListNode reverseLinkedList(ListNode node){
+        ListNode prev = null;
+        ListNode curr = node;
+        ListNode next = null;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        node = prev;
+        return node;
+    }
+    // Method to reverse the Linked List from the current node.
+
     public void createCycle(int start, int end, ListNode node){
         ListNode ref = node;
         while(start != 1){
