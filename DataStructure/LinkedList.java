@@ -28,7 +28,7 @@ public class LinkedList {
     }
     // Method to insert at the head of the Linked List
 
-    public ListNode reverseLinkedList(ListNode node){
+    public static ListNode reverseLinkedList(ListNode node){
         ListNode prev = null;
         ListNode curr = node;
         ListNode next = null;

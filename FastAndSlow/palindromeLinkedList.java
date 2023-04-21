@@ -1,7 +1,26 @@
 package FastAndSlow;
 
+import DataStructure.LinkedList;
+import DataStructure.ListNode;
+
 public class palindromeLinkedList {
-    
+    public boolean isPalindrome(ListNode head) {
+        ListNode slow = head;                       
+        ListNode fast = head;                  
+        while(fast != null && fast.next != null){
+            slow = slow.next;                       
+            fast = fast.next.next;                  
+        }
+        ListNode mid = LinkedList.reverseLinkedList(slow);
+        slow = head;
+        while(slow != null && mid != null) {
+            if(slow.data != mid.data)
+                return false;
+            slow = slow.next;
+            mid = mid.next;
+        }
+        return true;
+    }
 }
 
 /*
