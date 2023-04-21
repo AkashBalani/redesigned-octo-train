@@ -2,10 +2,12 @@ package DataStructure;
 
 public class LinkedList {
     public ListNode head;
-    
+    // Head node of the Linked List
+
     public LinkedList() {
         this.head = null;
     }
+    // Blank Constructor for the Linked List
 
     public ListNode insertOnTail(ListNode node, ListNode head){
         ListNode copyOfHead = head;
@@ -14,6 +16,17 @@ public class LinkedList {
         copyOfHead.next = node;
         return head;
     }
+    // Method to insert at the tail of the Linked List
+
+    public void insertOnHead(ListNode node){
+        if(this.head == null)
+            this.head = node;
+        else{
+            node.next = this.head;
+            this.head = node;
+        }
+    }
+    // Method to insert at the head of the Linked List
 
     public void createCycle(int start, int end, ListNode node){
         ListNode ref = node;
