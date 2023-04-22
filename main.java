@@ -1,22 +1,13 @@
-import java.util.Scanner;
 
-import DataStructure.LinkedList;
-import DataStructure.ListNode;
-import FastAndSlow.circularArray;
-import FastAndSlow.palindromeLinkedList;
+import java.util.ArrayList;
+import java.util.List;
+
+import SlidingWindow.repeatedDNASequence;
 
 public class main {
     public static void main(String[] args) {
-        
-        palindromeLinkedList list = new palindromeLinkedList();
-        ListNode node = new ListNode(1);
-        node.next = new ListNode(2);
-        node.next.next = new ListNode(3);
-        node.next.next.next = new ListNode(3);
-        node.next.next.next.next = new ListNode(2);
-        node.next.next.next.next.next = new ListNode(1);
-
-        boolean result = list.isPalindrome(node);
+        repeatedDNASequence sequence = new repeatedDNASequence();
+        List<String> result = sequence.findRepeatedSequences("AGCTGAAAGCTTAGCTG", 5);;
         System.out.println(result);
     }
 }
