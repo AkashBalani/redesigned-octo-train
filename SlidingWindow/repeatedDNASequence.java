@@ -58,6 +58,17 @@ public class repeatedDNASequence {
         }
         return numbers;
     }
+
+    public List<String> usingLinearMethod(String s, int k){
+        HashSet<String> seen = new HashSet<>(), output = new HashSet<>();
+        for(int windowEnd = 0; windowEnd < s.length() - k + 1; windowEnd++){
+            String temp = s.substring(windowEnd, windowEnd + k);
+            if(seen.contains(temp))
+                output.add(temp);
+            seen.add(temp);
+        }
+        return new ArrayList<>(output);
+    }
 }
 
 /*
@@ -67,5 +78,11 @@ public class repeatedDNASequence {
  * returned subsequences does not
  * matter.
  * If no repeated subsequence is found, the function should return an empty set.
- * 
  */
+
+ /*
+  * Notes from Leetcode editorial
+  * Linear-time slice using substring + HashSet
+  * 1. Move a sliding window of length 'L' on a string of length 'N'
+  * 2. For every sequence if it has been seen before update the result, otherwise add it to the seen set.
+  */
