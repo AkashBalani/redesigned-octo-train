@@ -33,3 +33,5 @@ output = (3, 3, 4, 5, 5, 5, 6)
 2. This way we can remove and add elements easily from the window
 3. Although ArrayList would be a tad bit simplier.
 4. I'll start with the ArrayList implementation first.
+5. Okay, I think a Queue would be better as sorting the arraylist would be pointless.
+6. I think Priority Queue fits this purpose as we can remove the max element in constant time but inserting becomes O(logn)
