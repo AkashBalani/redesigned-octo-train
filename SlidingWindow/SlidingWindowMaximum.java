@@ -1,12 +1,9 @@
 package SlidingWindow;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 /**
  * SlidingWindowMaximum
@@ -17,7 +14,7 @@ public class SlidingWindowMaximum {
 
         PriorityQueue<Integer> queue = new PriorityQueue<Integer>(w, Comparator.reverseOrder());
         List<Integer> helperList = new ArrayList<>();
-        int max = 0;
+        int max = Integer.MIN_VALUE;
         List<Integer> list = new ArrayList<Integer>();
         for(int i = 0; i < nums.length; i++){
             if(queue.size() < w){
