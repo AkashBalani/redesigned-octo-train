@@ -42,6 +42,12 @@ public class SlidingWindowMaximum {
         if (nums.length == 0) {
             return new int[0];
         }
+        // If input is empty return null
+        
+        if (w > nums.length) {
+            w = nums.length;
+        }
+        // If the window size is greater than the array size, set window size = array size
         return new int[0];
     }
 }
