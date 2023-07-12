@@ -1,7 +1,9 @@
 package SlidingWindow;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Deque;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -48,6 +50,9 @@ public class SlidingWindowMaximum {
             w = nums.length;
         }
         // If the window size is greater than the array size, set window size = array size
+
+        int[] output = new int[nums.length - w + 1];
+        Deque<Integer> currentWindow = new ArrayDeque<>(); 
         return new int[0];
     }
 }
