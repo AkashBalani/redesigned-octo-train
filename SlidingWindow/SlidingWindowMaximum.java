@@ -37,4 +37,11 @@ public class SlidingWindowMaximum {
         int[] result = list.stream().mapToInt(i->i).toArray();
         return result;
     }
+
+    public int[] findMaxSlidingWindowV2(int[] nums, int w){
+        if (nums.length == 0) {
+            return new int[0];
+        }
+        return new int[0];
+    }
 }
