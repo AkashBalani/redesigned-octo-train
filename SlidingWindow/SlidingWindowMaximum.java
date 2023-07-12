@@ -40,6 +40,13 @@ public class SlidingWindowMaximum {
         return result;
     }
 
+    public Deque<Integer> clearUp(int i, Deque<Integer> currentWindow, int[] nums){
+        while(currentWindow.size() != 0 && nums[i] >= nums[currentWindow.getLast()]){
+            currentWindow.removeLast();
+        }
+        return currentWindow;
+    }
+
     public int[] findMaxSlidingWindowV2(int[] nums, int w){
         if (nums.length == 0) {
             return new int[0];
@@ -53,6 +60,24 @@ public class SlidingWindowMaximum {
 
         int[] output = new int[nums.length - w + 1];
         Deque<Integer> currentWindow = new ArrayDeque<>(); 
-        return new int[0];
+
+        for(int i = 0; i < w; i++){
+            currentWindow = clearUp(i, currentWindow, nums);
+            currentWindow.add(i);
+        }
+        output[0] = nums[currentWindow.getFirst()];
+
+        for(int i = w; i < nums.length; i++){
+            clearUp(i, currentWindow, nums);
+
+            if(!currentWindow.isEmpty() && currentWindow.getFirst() <= (i - w)) {
+                currentWindow.removeLast();
+            }
+
+            currentWindow.add(i);
+
+            output[i - w + 1] = nums[currentWindow.getFirst()];
+        }
+        return output;
     }
 }
